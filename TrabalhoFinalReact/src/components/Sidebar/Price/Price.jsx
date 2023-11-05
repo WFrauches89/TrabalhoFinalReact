@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from "../../components/Input";
-import pricecss from "../Price/Price.css";
+import Input from "../../Input";
+import pricecss from "./Price.css";
 
 function Price({ handleChange }) {
   return (

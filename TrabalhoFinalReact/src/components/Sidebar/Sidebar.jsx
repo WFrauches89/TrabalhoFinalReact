@@ -1,6 +1,8 @@
 import Category from "./Category/Category";
 import Price from "./Price/Price";
 import Colors from "./Colors/Colors";
+import iclogo from "../../img/iclogo.svg"
+
 import "./Sidebar.css";
 
 function Sidebar({handleChange}) {
@@ -10,7 +12,9 @@ function Sidebar({handleChange}) {
     <>
       <section className="sidebar">
         <div className="logo-container">
-          <h1>🚛</h1>
+        <a href="http://localhost:5174/home">
+          <img src={iclogo} alt="Logo Home" />
+        </a>
         </div>
         <Category handleChange={handleChange}/>
         <Price handleChange={handleChange}/>

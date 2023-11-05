@@ -1,5 +1,5 @@
 import { FiHeart } from "react-icons/fi";
-import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 import "./Nav.css";
 
 const Nav = ({ handleInputChange, query }) => {
@@ -15,15 +15,19 @@ const Nav = ({ handleInputChange, query }) => {
         />
       </div>
       <div className="profile-container">
-        <a href="#">
-          <FiHeart className="nav-icons" />
+      Olá, faça o seu login.<a href="http://localhost:5174/login">
+          <AiOutlineUser className="nav-icons"  /> 
         </a>
         <a href="">
           <AiOutlineShoppingCart className="nav-icons" />
         </a>
-        <a href="">
-          <AiOutlineUserAdd className="nav-icons" />
+        <a href="#">
+          <FiHeart className="nav-icons" />
         </a>
+        {/* <a href="http://localhost:5174/cadastro">
+          <AiOutlineUserAdd className="nav-icons"  />
+        </a> */}
+
       </div>
     </nav>
   );
