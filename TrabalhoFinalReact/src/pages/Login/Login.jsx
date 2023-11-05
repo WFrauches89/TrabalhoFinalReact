@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import GlobalStyle from '../../global/globalStyle'; 
 import {
   LoginContainer,
   AnimatedCircle,
@@ -41,7 +42,7 @@ const Login = () => {
   return (
 
     <>
-    
+    <GlobalStyle /> {}
     <LoginContainer>
       <AnimatedCircle />
       <Text>Faça login no Game Quest World</Text>

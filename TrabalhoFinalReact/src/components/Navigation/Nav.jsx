@@ -15,7 +15,7 @@ const Nav = ({ handleInputChange, query }) => {
         />
       </div>
       <div className="profile-container">
-      Olá, faça o seu login.<a href="http://localhost:5174/login">
+      Olá, faça o seu login.<a href="http://localhost:5173/login">
           <AiOutlineUser className="nav-icons"  /> 
         </a>
         <a href="">

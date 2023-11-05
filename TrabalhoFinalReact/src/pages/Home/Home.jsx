@@ -73,6 +73,7 @@ function Home() {
 
     return (
       <>
+       
         <Sidebar handleChange={handleChange}/>
         <Navigation query={query} handleInputChange={handleInputChange}/>
         <Recommended handleClick={handleClick}/>
