@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import GlobalStyle from '../../global/globalStyle'; 
+import React, { useState, useEffect } from "react";
+import GlobalStyle from "../../global/globalStyle";
+import { useNavigate } from 'react-router-dom';
+import {NavLogin} from '../../components/NavBarLogin/index';
+import {Footer} from '../../components/footer/index';
 import {
   LoginContainer,
   AnimatedCircle,
@@ -13,116 +16,157 @@ import {
   LogoContainer,
   LogoImage,
   ErrorText,
-} from '../Login/stylesLogin';
-import { FaEnvelope, FaLock } from 'react-icons/fa';
-
-import logoImage from '../../img/Games.png';
+} from "../Cadastro/stylesCadastro";
+import { FaEnvelope, FaLock, FaUser } from "react-icons/fa";
+import logoImage from "../../img/Games.png";
+import instance from "../../services/api";
 
 const Cadastro = () => {
-  const [senha, setSenha] = useState('');
-  const [confirmaSenha, setConfirmaSenha] = useState('');
-  const [emailTelefone, setEmailTelefone] = useState('');
+  const navigate = useNavigate();
+  const [usuario, setUsuario] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [confirmaSenha, setConfirmaSenha] = useState("");
+  const [errorSenha, setErrorSenha] = useState("");
+  const [errorConfirmaSenha, setErrorConfirmaSenha] = useState("");
+  const [errorCadastro, setErrorCadastro] = useState("");
   const [cadastrosAnteriores, setCadastrosAnteriores] = useState([]);
-  const [errorSenha, setErrorSenha] = useState('');
-  const [errorConfirmaSenha, setErrorConfirmaSenha] = useState('');
-  const [errorCadastro, setErrorCadastro] = useState('');
 
   useEffect(() => {
     if (confirmaSenha && senha !== confirmaSenha) {
-      setErrorConfirmaSenha('As senhas não coincidem');
+      setErrorConfirmaSenha("As senhas não coincidem");
     } else {
-      setErrorConfirmaSenha('');
+      setErrorConfirmaSenha("");
     }
-
 
     if (senha.length > 0 && senha.length < 6) {
-      setErrorSenha('A senha deve ter pelo menos 6 caracteres');
+      setErrorSenha("A senha deve ter pelo menos 6 caracteres");
     } else {
-      setErrorSenha('');
+      setErrorSenha("");
     }
+  }, [senha, confirmaSenha]);
 
-    if (cadastrosAnteriores.includes(emailTelefone)) {
-      setErrorCadastro('O email ou telefone já foi cadastrado anteriormente');
-    } else {
-      setErrorCadastro('');
+  const carregarCadastrosAnteriores = async () => {
+    try {
+      const response = await instance.get("/cadastros");
+      setCadastrosAnteriores(response.data);
+     console.log(response.data);
+    } catch (error) {
+      console.error("Erro ao carregar cadastros anteriores", error);
     }
-  }, [senha, confirmaSenha, emailTelefone, cadastrosAnteriores]);
-
-  const carregarCadastrosAnteriores = () => {
-
-    const dadosExemplo = [];
-    setCadastrosAnteriores(dadosExemplo);
   };
-
-
   useEffect(() => {
     carregarCadastrosAnteriores();
-  }, []);
+  }, [email]);
 
-  const handleCadastrar = () => {
-    if (!errorSenha && !errorConfirmaSenha && !errorCadastro) {
-      console.log('Cadastro realizado com sucesso');
+  const handleCadastrar = async () => {
+    for (const element of cadastrosAnteriores) {
+      if (element.email === email) {
+        alert("O email já foi cadastrado!");
+        return;
+      }
+      } 
+      if (
+        usuario !== "" &&
+        email !== "" &&
+        senha !== "" &&
+        confirmaSenha !== ""
+      ) {
+        try {
+          const newUser = {
+            nome: usuario,
+            email: email,
+            senha: senha,
+          };
 
-    }
+           const response = await instance.post("/cadastros", newUser);
+          alert("Usuário cadastrado com sucesso:");
+          setUsuario("");
+          setEmail("");
+          setSenha("");
+          setConfirmaSenha("");
+          setErrorCadastro("Usuário cadastrado com sucesso");
+
+          
+          window.location.href = '/login';
+        } catch (error) {
+          setErrorCadastro("Erro ao cadastrar o usuário");
+          console.error("Erro ao cadastrar o usuário:", error);
+         }
+      }
+   
   };
-
   return (
     <>
-  
-    <GlobalStyle /> 
-    <LoginContainer>
-      <AnimatedCircle />
-      <Text>Cadastre-se no Game Quest World</Text>
-      <Form>
-        <Field>
-          <Icon className="icon">
-            <FaEnvelope style={Icon.iconStyle} />
-          </Icon>
-          <Input
-            type="text"
-            placeholder="Email ou Telefone"
-            value={emailTelefone}
-            onChange={(e) => setEmailTelefone(e.target.value)}
-            required
-          />
-        </Field>
-        <Field>
-          <Icon className="icon">
-            <FaLock style={Icon.iconStyle} />
-          </Icon>
-          <Input
-            type="password"
-            placeholder="Senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-            required
-          />
-        </Field>
-        <Field>
-          <Icon className="icon">
-            <FaLock style={Icon.iconStyle} />
-          </Icon>
-          <Input
-            type="password"
-            placeholder="Confirma Senha"
-            value={confirmaSenha}
-            onChange={(e) => setConfirmaSenha(e.target.value)}
-            required
-          />
-        </Field>
-        <ErrorText error={errorSenha}>{errorSenha}</ErrorText>
-        <ErrorText error={errorConfirmaSenha}>{errorConfirmaSenha}</ErrorText>
-        <ErrorText error={errorCadastro}>{errorCadastro}</ErrorText>
-        <Button onClick={handleCadastrar}>CADASTRAR</Button>
-        <Link>
-          Já tem uma conta?
-          <a href="#"> Entrar</a>
-        </Link>
-      </Form>
-      <LogoContainer>
-        <LogoImage src={logoImage} alt="Logo" />
-      </LogoContainer>
-    </LoginContainer>
+
+      <NavLogin />
+      <GlobalStyle />
+      <LoginContainer>
+        <AnimatedCircle />
+        <Text>Cadastre-se no Game Quest World</Text>
+        <Form>
+          <Field>
+            <Icon className="icon">
+              <FaUser />
+            </Icon>
+            <Input
+              type="text"
+              placeholder="Nome Completo"
+              value={usuario}
+              onChange={(e) => setUsuario(e.target.value)}
+              required
+            />
+          </Field>
+          <Field>
+            <Icon className="icon">
+              <FaEnvelope />
+            </Icon>
+            <Input
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </Field>
+          <Field>
+            <Icon className="icon">
+              <FaLock />
+            </Icon>
+            <Input
+              type="password"
+              placeholder="Senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              required
+            />
+          </Field>
+          <Field>
+            <Icon className="icon">
+              <FaLock />
+            </Icon>
+            <Input
+              type="password"
+              placeholder="Confirma Senha"
+              value={confirmaSenha}
+              onChange={(e) => setConfirmaSenha(e.target.value)}
+              required
+            />
+          </Field>
+          <ErrorText error={errorSenha}>{errorSenha}</ErrorText>
+          <ErrorText error={errorConfirmaSenha}>{errorConfirmaSenha}</ErrorText>
+          <ErrorText error={errorCadastro}>{errorCadastro}</ErrorText>
+          <Button type="button" onClick={handleCadastrar}>CADASTRAR</Button>
+          <Link>
+            Já tem uma conta?
+            <a href="login"> Entrar</a>
+          </Link>
+        </Form>
+        <LogoContainer>
+          <LogoImage src={logoImage} alt="Logo" />
+        </LogoContainer>
+      </LoginContainer>
+      <Footer />
     </>
   );
 };

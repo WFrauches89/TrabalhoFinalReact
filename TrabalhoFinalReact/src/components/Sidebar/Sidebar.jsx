@@ -1,25 +1,19 @@
 import Category from "./Category/Category";
 import Price from "./Price/Price";
-import Colors from "./Colors/Colors";
-import iclogo from "../../img/iclogo.svg"
+import iclogo from "../../img/logoMario.png"
 
-import "./Sidebar.css";
+import {Section} from "./styled.js";
 
 function Sidebar({handleChange}) {
   
 
   return (
     <>
-      <section className="sidebar">
-        <div className="logo-container">
-        <a href="http://localhost:5174/home">
-          <img src={iclogo} alt="Logo Home" />
-        </a>
-        </div>
+      <Section className="sidebar">
         <Category handleChange={handleChange}/>
         <Price handleChange={handleChange}/>
-        <Colors handleChange={handleChange}/>
-      </section>
+        {/* <Colors handleChange={handleChange}/> */}
+      </Section>
     </>
   );
 }

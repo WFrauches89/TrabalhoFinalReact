@@ -1,20 +1,27 @@
-.card-container {
-    display: flex;
+import styled from "styled-components"
+
+export const Section = styled.section`
+
+
+display: flex;
     flex-wrap: wrap;
-    margin-left: 20rem;
+   
+    justify-content: center;
     margin-top: 2rem;
     z-index: -2;
-  }
+  
   
   .card {
     margin: 20px;
     border: 2px solid #ededed;
     padding: 20px;
     cursor: pointer;
+    width: 270px;
   }
   
   .card-img {
-    width: 13rem;
+    width: 250px;
+    height: 200px;
     margin-bottom: 1rem;
   }
   
@@ -45,3 +52,4 @@
   .bag-icon {
     color: #535353;
   }
+  ` 

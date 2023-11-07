@@ -11,7 +11,7 @@ const spin = keyframes`
 
 export const LoginContainer = styled.div`
   width: 400px;
-  margin: 5% 10% 0 17%;
+  margin: 0% 10% 0 17%;
   height: 700px;
   background: transparent;
   padding: 40px 35px 60px;
@@ -26,18 +26,16 @@ export const LoginContainer = styled.div`
 
 export const AnimatedCircle = styled.div`
   position: absolute;
-  width: 610px;
-  height: 610px;
+  width: 650px;
+  height: 650px;
   border: 10px solid transparent;
   border-top: 10px solid #00FFFF;
   border-radius: 50%;
   z-index: -1;
   animation: ${spin} 3s linear infinite;
-  top: -90px;
+  top: -70px;
   left: -30%;
 `;
-
-
 
 export const Text = styled.div`
   font-size: 30px;
@@ -155,7 +153,7 @@ export const Link = styled.div`
 
 export const LogoContainer = styled.div`
   float: right;
-  margin-top: -480px;
+  margin-top: -500px;
   margin-right: -880px;
 `;
 

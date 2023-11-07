@@ -1,9 +1,9 @@
-import "./Products.css";
+import {Section} from "./styled.js";
 
 const Products = ({ result }) => {
   return (
     <>
-      <section className="card-container">{result}</section>
+      <Section className="card-container">{result}</Section>
     </>
   );
 };

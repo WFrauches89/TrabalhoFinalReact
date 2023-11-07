@@ -1,3 +1,7 @@
+import styled from "styled-components"
+
+export const Div = styled.div`
+
 .sidebar-title {
     font-size: 22px;
     font-weight: normal;
@@ -7,26 +11,21 @@
   .sidebar-items {
     margin-top: 20px;
   }
-  
+
+
+  div{
   .sidebar-label-container {
     display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    -webkit-user-select: none;
+    /* -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  .sidebar-label-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  .checkmark {
+   */
+    .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -35,30 +34,14 @@
     background-color: #eee;
     border-radius: 50%;
   }
-  
-  .all {
-    background: linear-gradient(blue, crimson);
-  }
-  
-  .sidebar-label-container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  .sidebar-label-container input:checked ~ .checkmark {
-    background-color: #2196f3;
-  }
-  
+
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
-  
-  .sidebar-label-container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  .sidebar-label-container .checkmark:after {
+
+  .checkmark:after {
     top: 6.4px;
     left: 6.4px;
     width: 7px;
@@ -66,8 +49,47 @@
     border-radius: 50%;
     background: white;
   }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
   
-  .line {
+  
+  }
+
+  .sidebar-label-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+  
+
+  .sidebar-label-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .sidebar-label-container input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+
+}
+ 
+  
+  /* .all {
+    background: linear-gradient(blue, crimson);
+  }
+   */
+
+  
+ 
+  
+ 
+  
+  /* .line {
     margin-top: 3rem;
     border-color: #f7f7f7;
-  }
+  } */
+
+  ` 

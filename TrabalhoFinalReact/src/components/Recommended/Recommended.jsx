@@ -1,19 +1,19 @@
 import Buttons from "../Buttons";
-import "./Recommended.css";
+import {Div} from "./styled.js";
 
 const Recommended = ({ handleClick }) => {
   return (
     <>
-      <div>
+      <Div >
         <h2 className="recommended-title">Recommended</h2>
         <div className="recommended-flex">
           <Buttons onClickHandler={handleClick} value="" title="All Products" />
-          <Buttons onClickHandler={handleClick} value="Nike" title="Nike" />
-          <Buttons onClickHandler={handleClick} value="Adidas" title="Adidas" />
-          <Buttons onClickHandler={handleClick} value="Puma" title="Puma" />
-          <Buttons onClickHandler={handleClick} value="Vans" title="Vans" />
+          <Buttons onClickHandler={handleClick} value="PS5" title="PLAYSTATION 5" />
+          <Buttons onClickHandler={handleClick} value="XBOX SERIES X" title="XBOX SERIES X" />
+          <Buttons onClickHandler={handleClick} value="NINTENDO SWITCH" title="SWITCH" />
+          <Buttons onClickHandler={handleClick} value="PS4" title="PLAYSTATION 4" />
         </div>
-      </div>
+      </Div>
     </>
   );
 };

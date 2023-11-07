@@ -1,9 +1,9 @@
-import "./Category.css";
+import {Div} from "./styled.js";
 import Input from "../../Input";
 
 function Category({ handleChange }) {
   return (
-    <div>
+    <Div>
       <h2 className="sidebar-title">Category</h2>
 
       <div>
@@ -36,7 +36,7 @@ function Category({ handleChange }) {
           name="test"
         />
       </div>
-    </div>
+    </Div>
   );
 }
 

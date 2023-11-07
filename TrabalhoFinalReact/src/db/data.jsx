@@ -2,319 +2,205 @@ import { AiFillStar } from "react-icons/ai";
 
 const data = [
   {
-    img: "https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg",
-    title: "Nike Air Monarch IV",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Nike",
-    color: "white",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/81RfcW3Ml-L._AC_SX385_.jpg",
+    title: "Spider-Man 2",
+    newPrice: "R$312,14",
+    company: "PS5",
+  
   },
   {
-    img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
-    title: "Nike Air Vapormax Plus",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Nike",
-    color: "red",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/610aw15JvKL._AC_SX679_.jpg",
+    title:"Assassines Creed Mirage",
+    newPrice: "R$234,87",
+    company: "PS5",
+
   },
 
   {
-    img: "https://m.media-amazon.com/images/I/51+P9uAvb1L._AC_UY695_.jpg",
-    title: "Nike Waffle One Sneaker",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Nike",
-    color: "green",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/61+lZsNKGuL._AC_SX679_.jpg",
+    title: "EA Sports FC 24",
+    newPrice:"R$316,70",
+    company: "PS5"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/71oEKkghg-L._AC_UX575_.jpg",
-    title: "Nike Running Shoe",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Adidas",
-    color: "black",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/81FBIrIvLVL._AC_SX679_.jpg",
+    title: "Spider-Man: Miles Morales",
+    newPrice: "R$159,90",
+    company: "PS5"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/41M54ztS6IL._AC_SY625._SX._UX._SY._UY_.jpg",
-    title: "Flat Slip On Pumps",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Vans",
-    color: "green",
-    category: "flats",
+    img: "https://m.media-amazon.com/images/I/8136lnf0n2L.jpg",
+    title: "God of War Ragnarok",
+    newPrice: "R$238,90",
+    company:  "PS5"
   },
   {
-    img: "https://m.media-amazon.com/images/I/71zKuNICJAL._AC_UX625_.jpg",
-    title: "Knit Ballet Flat",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "50",
-    company: "Adidas",
-    color: "black",
-    category: "flats",
+    img: "https://m.media-amazon.com/images/I/81nKXrSTgdL._AC_SX385_.jpg",
+    title: "Watch Dogs Legion",
+    newPrice: "R$78,90",
+    company: "PS5"
+
   },
 
   {
-    img: "https://m.media-amazon.com/images/I/61V9APfz97L._AC_UY695_.jpg",
-    title: "Loafer Flats",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "50",
-    company: "Vans",
-    color: "white",
-    category: "flats",
+    img: "https://m.media-amazon.com/images/I/61MXORMRgML._AC_SX679_.jpg",
+    title: "Horizon Forbidden West",
+    newPrice: "R$199,90",
+    company: "STUDIOS",
+    console: "PS5"
+
   },
 
   {
-    img: "https://m.media-amazon.com/images/I/71VaQ+V6XnL._AC_UY695_.jpg",
-    title: "Nike Zoom Freak",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Nike",
-    color: "green",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/61sM22Dx3uL._AC_SX679_.jpg",
+    title: "Mortal Kombat",
+    newPrice: "R$270,00",
+    company: "PS5"
+
   },
 
   {
-    img: "https://m.media-amazon.com/images/I/61-cBsLhJHL._AC_UY695_.jpg",
-    title: "Nike Men's Sneaker",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Adidas",
-    color: "blue",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/81DrHt5-OBL._AC_SX569_.jpg",
+    title: "FIFA 22",
+    newPrice: "R$93,90",
+    company: "XBOX SERIES X"
+
   },
 
   {
-    img: "https://m.media-amazon.com/images/I/81xXDjojYKS._AC_UX575_.jpg",
-    title: "PUMA BLACK-OCE",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "150",
-    company: "Puma",
-    color: "green",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/61WVxd04YNL._AC_SX569_.jpg",
+    title: "One Piece Odyssey",
+    newPrice: "R$209,89",
+    company: "XBOX SERIES X"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/71E75yRwCDL._AC_UY575_.jpg",
-    title: "Pacer Future Sneaker",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "150",
-    company: "Puma",
-    color: "red",
-    category: "sneakers",
+ 
+    img: "https://m.media-amazon.com/images/I/81duXjS1JvS._AC_SY741_.jpg",
+    title: "Call of Duty Black Ops Cold War",
+    newPrice: "R$120,30",
+    company: "XBOX SERIES X"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/71jeoX0rMBL._AC_UX575_.jpg",
-    title: "Unisex-Adult Super",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "150",
-    company: "Puma",
-    color: "black",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/61fejTyxyxL._AC_SX679_.jpg",
+    title: "Marvel Midnight Suns",
+    newPrice: "R$127,31",
+    company: "XBOX SERIES X"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/61TM6Q9dvxL._AC_UX575_.jpg",
-    title: "Roma Basic Sneaker",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "150",
-    company: "Puma",
-    color: "white",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/616MGxXJPEL._AC_SX679_.jpg",
+    title: "Rainbow Six Siege ",
+    newPrice: "R$78,10",
+    company: "XBOX SERIES X"
   },
   {
-    img: "https://m.media-amazon.com/images/I/7128-af7joL._AC_UY575_.jpg",
-    title: "Pacer Future Doubleknit",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "150",
-    company: "Puma",
-    color: "black",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/81JvbEKnjlL._AC_SY741_.jpg",
+    title: "Sonic Origins Plus",
+    newPrice: "R$228,80",
+    company: "XBOX SERIES X"
+
   },
 
   {
-    img: "https://m.media-amazon.com/images/I/81xXDjojYKS._AC_UX575_.jpg",
-    title: "Fusion Evo Golf Shoe",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "100",
-    company: "Puma",
-    color: "green",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/81lvjnCz4IL._AC_SY741_.jpg",
+    title: "Lego Star Wars",
+    newPrice: "R$319,99",
+    company: "XBOX SERIES X"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/719gdz8lsTS._AC_UX575_.jpg",
-    title: "Rainbow Chex Skate",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "100",
-    company: "Vans",
-    color: "red",
-    category: "flats",
+    img: "https://m.media-amazon.com/images/I/81aqvlzrIjL._AC_SY741_.jpg",
+    title: "Sonic Frontiers",
+    newPrice: "R$378,90",
+    company: "XBOX SERIES X"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/71gpFHJlnoL._AC_UX575_.jpg",
-    title: "Low-Top Trainers",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "100",
-    company: "Vans",
-    color: "white",
-    category: "sandals",
+    img: "https://m.media-amazon.com/images/I/71eulBrd5JL._AC_SY741_.jpg",
+    title: "LEGO Marvel Super Heroes",
+    newPrice: "R$199,89",
+    company: "NINTENDO SWITCH"
   },
   {
-    img: "https://m.media-amazon.com/images/I/71pf7VFs9CL._AC_UX575_.jpg",
-    title: "Vans Unisex Low-Top",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "100",
-    company: "Vans",
-    color: "blue",
-    category: "sandals",
+    img: "https://m.media-amazon.com/images/I/711nB1PK-wL._AC_SY741_.jpg",
+    title: "Super Mario Bros. Wonder",
+    newPrice: "R$349,90",
+    company: "NINTENDO SWITCH"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/61N4GyWcHPL._AC_UY575_.jpg",
-    title: "Classic Bandana Sneakers",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "50",
-    company: "Nike",
-    color: "black",
-    category: "sandals",
+    img: "https://m.media-amazon.com/images/I/61rG3WrXoJL._AC_SY741_.jpg",
+    title: "Zelda - Tears of Kingdom",
+    newPrice: "R$312,00",
+    company: "NINTENDO SWITCH"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/61bncQ44yML._AC_UX695_.jpg",
-    title: "Chunky High Heel",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "50",
-    company: "Vans",
-    color: "black",
-    category: "heels",
+    img: "https://m.media-amazon.com/images/I/61sXjJb5-yL._AC_SY741_.jpg",
+    title: "Super Mario RPG",
+    newPrice: "R$349,00",
+    company: "NINTENDO SWITCH"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/71czu7WgGuL._AC_UY695_.jpg",
-    title: "Slip On Stiletto High Heel",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "100",
-    company: "puma",
-    color: "black",
-    category: "heels",
+    img: "https://m.media-amazon.com/images/I/81FDtrQluyL._AC_SY741_.jpg",
+    title: "Zelda: Breath Of The Wild",
+    newPrice: "R$266,98",
+    company: "NINTENDO SWITCH"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/61men05KRxL._AC_UY625_.jpg",
-    title: "DREAM PAIRS Court Shoes",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "150",
-    company: "Nike",
-    color: "red",
-    category: "heels",
+    img: "https://m.media-amazon.com/images/I/61VIGM75+pL._AC_SY445_SX342_.jpg",
+    title: "Metroid Dread",
+    newPrice: "R$291,27",
+    company: "NINTENDO SWITCH"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
-    title: "Nike Air Vapormax Plus",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Nike",
-    color: "red",
-    category: "sneakers",
+    img: "https://m.media-amazon.com/images/I/81yvNc7BfZL._AC_SY741_.jpg",
+    title: "Pokemon Violet",
+    newPrice: "R$288,59",
+    company: "NINTENDO SWITCH"
   },
 
   {
-    img: "https://m.media-amazon.com/images/I/51PGWTXgf-L._AC_UY625_.jpg",
-    title: "Low Mid Block Heels",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Nike",
-    color: "black",
-    category: "heels",
+    img: "https://m.media-amazon.com/images/I/81nzWAWCs-L._AC_SY741_.jpg",
+    title: "Animal Crossing: New Horizon",
+    newPrice: "R$288,98",
+    company: "NINTENDO SWITCH"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/616sA5XUKtL._AC_UY675_.jpg",
-    title: "Chunky High Heel",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "50",
-    company: "Adidas",
-    color: "black",
-    category: "heels",
+    img: "https://m.media-amazon.com/images/I/81rpiLilbuL._AC_SX569_.jpg",
+    title: "Hollow Knight",
+    newPrice: "R$229,89",
+    company: "PS4"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/71h5+MbEK7L._AC_UY625_.jpg",
-    title: "Amore Fashion Stilettos",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "150",
-    company: "Adidas",
-    color: "white",
-    category: "heels",
+    img: "https://m.media-amazon.com/images/I/81nBUb2qNKL._AC_SX569_.jpg",
+    title: "Grand Theft Auto V",
+    newPrice: "R$82,39",
+    company: "PS4"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/61uw5RDxKQL._AC_UY625_.jpg",
-    title: "Bridal Sandals Glitter",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "50",
-    company: "Adidas",
-    color: "black",
-    category: "heels",
+    img: "https://m.media-amazon.com/images/I/81ERM1RSaOS._AC_SX569_.jpg",
+    title: "Tales of Arise",
+    newPrice: "R$159,89",
+    company: "PS4"
+
   },
   {
-    img: "https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg",
-    title: "Wedding Prom Bridal",
-    star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "50",
-    company: "Adidas",
-    color: "black",
-    category: "flats",
+    img: "https://m.media-amazon.com/images/I/71XrxGqPosL._AC_SX569_.jpg",
+    title: "Red Dead Redemption 2",
+    newPrice: "R$145,15",
+    company: "PS4"
+
   },
 ];
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import Input from "../../Input";
-import pricecss from "./Price.css";
+import {Div} from "./styled.js";
 
 function Price({ handleChange }) {
   return (
-    <div className="ml">
+    <Div>
       <h2 className="sidebar-title price-title">Price</h2>
 
       <label className="sidebar-label-container">
@@ -44,7 +44,7 @@ function Price({ handleChange }) {
 
 
       </div>
-    </div>
+    </Div>
   );
 }
 
